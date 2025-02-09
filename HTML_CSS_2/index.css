@@ -1,0 +1,36 @@
+h1 {
+  margin-left: 10px;
+}
+h2 {
+  margin-left: 10px;
+}
+nav {
+  font-size: 30px;
+}
+a {
+  color: rgb(100, 100, 100);
+}
+a:hover {
+  color: #000;
+}
+a:visited {
+  color: rgb(180, 180, 180);
+}
+ul {
+  list-style-type: circle;
+}
+section {
+  margin-left: 10px;
+  font-size: 20px;
+}
+footer {
+  width: 100vw;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ff7700;
+  position: absolute;
+  bottom: 0;
+}
+body {
+  margin: 0;
+}

@@ -1,0 +1,14 @@
+.static {
+  background-color: #fdd1c8;
+  height: 100px;
+}
+.sticky {
+  background-color: #fcfdc8;
+  position: sticky;
+  /*아래 값을 바꿔보며 원하는 위치에 고정시키기*/
+  top: 0;
+}
+div {
+  width: 300px;
+  border: solid;
+}

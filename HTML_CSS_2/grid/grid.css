@@ -1,0 +1,48 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+@media only screen and (max-width: 300px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+/* 실습문제 4-1 아래에 코드를 작성*/
+
+/* 실습문제 4-2 아래에 코드를 작성*/
+
+/* 아래 코드 수정하지 X */
+.item {
+  text-align: center;
+  height: 100px;
+}
+.item-1 {
+  background-color: lightyellow;
+}
+.item-2 {
+  background-color: lightgreen;
+}
+.item-3 {
+  background-color: lightblue;
+}
+.item-4 {
+  background-color: lightpink;
+}
+.item-5 {
+  background-color: lightcoral;
+}
+.item-6 {
+  background-color: lightsalmon;
+}
+.item-7 {
+  background-color: purple;
+}
+.item-8 {
+  background-color: orange;
+}
+.item-9 {
+  background-color: lightseagreen;
+}

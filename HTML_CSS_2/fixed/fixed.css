@@ -1,0 +1,15 @@
+.static {
+  background-color: #fdd1c8;
+  height: 100px;
+}
+.fixed {
+  background-color: #fcfdc8;
+  /* 아래 positon: fixed 주석 처리 해보기 */
+  position: fixed;
+  top: 200px;
+  left: 20px;
+}
+div {
+  width: 300px;
+  border: solid;
+}

@@ -1,0 +1,28 @@
+span {
+  color: green;
+  background: yellow;
+  border: solid 1px;
+}
+.wrapper {
+  border: solid;
+  width: 300px;
+  height: 100px;
+}
+.box1 {
+  position: relative;
+  left: 15px;
+}
+
+.box2 {
+  position: relative;
+  top: 15px;
+}
+
+.box3 {
+  position: relative;
+  left: 55px;
+}
+.box4 {
+  background: blue;
+  color: white;
+}

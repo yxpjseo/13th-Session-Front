@@ -1,0 +1,58 @@
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container2 {
+  height: 200px;
+  display: flex;
+  /* 1번 문제, 아래에 코드를 추가하세요 */
+}
+.container3 {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  /* 2번 문제, 아래에 코드를 추가하세요 */
+}
+.container4 {
+  height: 200px;
+  display: flex;
+  /* 3번 문제, 아래에 코드를 추가하세요 */
+}
+/* 아래는 수정 X */
+div {
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+}
+section {
+  border: solid;
+  width: 400px;
+}
+.div1 {
+  background-color: #f5c2af;
+}
+.div2 {
+  background-color: #f0bb92;
+}
+.div3 {
+  background-color: #fcf2a2;
+}
+.div4 {
+  background-color: #cbfca2;
+}
+.div5 {
+  background-color: #a2ebfc;
+}
+.div6 {
+  background-color: #a2b7fc;
+}
+.div7 {
+  background-color: #deb4fd;
+}
+.div8 {
+  background-color: #fdb4df;
+}
+.div9 {
+  background-color: #9498ae;
+}
