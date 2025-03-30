@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모달 실습</title>
+  </head>
+  <body>
+    <h1>모달 실습</h1>
+    <button id="open-button">모달 열기</button>
+    <div class="modal-wrapper">
+      <div class="modal">
+        <h3 id="number">0</h3>
+        <button id="increase">증가</button>
+        <button id="decrease">감소</button>
+        <div class="modal-close">
+          <button id="close-button">닫기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // querySelector로 모달, 열기 버튼, 닫기 버튼 요소 선택하기
+    //  여기에 코드 작성
+    //  여기에 코드 작성
+    //  여기에 코드 작성
+
+    // 2개의 버튼에 addEventListener로 이벤트 핸들러 바인딩하기
+    // - 모달의 display 속성을 열기 버튼에는 flex로, 닫기 버튼에는 none으로 바꾸는 함수 작성
+    openBtn.addEventListener("click", function () {
+      // 함수 내부에 코드 작성
+    });
+    closeBtn.addEventListener("click", function () {
+      // 함수 내부에 코드 작성
+    });
+
+    // getElementById로 숫자, 증가 버튼, 감소 버튼 요소 선택하기
+    //  여기에 코드 작성
+    //  여기에 코드 작성
+    //  여기에 코드 작성
+
+    // 수를 증가/감소시키고 요소 내부 텍스트를 변경하는 함수 2개 작성
+    let num = 0;
+    const add = function () {
+      // 함수 내부에 코드 작성
+    };
+    const sub = function () {
+      // 함수 내부에 코드 작성
+    };
+    // 2개의 버튼에 addEventListener로 이벤트 핸들러 바인딩하기
+    //  여기에 코드 작성
+    //  여기에 코드 작성
+  </script>
+  <!-- 아래 스타일은 무시해도 됨 -->
+  <style>
+    .modal-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+    .modal {
+      background-color: #fff;
+      padding: 15px 20px;
+      border-radius: 20px;
+      width: 320px;
+    }
+    .modal-close {
+      text-align: right;
+      margin-top: 15px;
+    }
+  </style>
+</html>
