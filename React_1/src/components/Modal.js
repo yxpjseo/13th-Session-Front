@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
-const Modal = ({ setModal }) => {
+const Modal = () => {
   const style = {
     width: "100px",
     height: "100px",
     display: "flex",
   };
 
-  const deleteModal = () => {
-    setModal(false);
-  };
+  const deleteModal = () => {};
   return (
     <>
       <div style={style}>
-        <button onClick={deleteModal}>모달 삭제</button>
+        <button>모달 삭제</button>
       </div>
     </>
   );
