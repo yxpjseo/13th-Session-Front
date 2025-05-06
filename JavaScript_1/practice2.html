@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>practice2</title>
     <style>
-      /* .my-class {
-        원하는 배경색과 글자색으로 변경하세요 
-      } */
+      .my-class {
+        background-color: black;
+        color: pink;
+      }
     </style>
   </head>
   <body>
@@ -18,9 +19,16 @@
     <script>
       document.querySelector("#makeBtn").addEventListener("click", function () {
         // 1. 새로운 동적 element를 만들고, 그 값을 p에 담기
+        let p1 = document.createElement("p");
+
         //2. 만든 p element에 class 속성 추가하기
+        p1.setAttribute("class", "my-class");
+
         //3. 만든 p element에 innerText 추가하기
+        p1.innerText = "p에 추가할 innerText입니다.";
+
         //4. 만든 p element를 id가 one인 요소(p)의 자식 요소로 추가하기
+        document.querySelector("#one").append(p1);
       });
     </script>
   </body>
