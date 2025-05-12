@@ -1,20 +1,33 @@
 import { useState } from "react";
 
 const Input = () => {
-  const [text, setText] = useState("");
+  const [inputs, setInputs] = useState({
+    name: "",
+    nth: "",
+  });
+  const { name, nth } = inputs;
+  //구조분해 할당 inputs.*이 아니라 그냥 쓰기 위해서
 
   const onChange = (e) => {
-    setText(e.target.value);
+    const { name, value } = e.target;
+    setInputs({ ...inputs, [name]: value });
+    //setInputs({name:"", nth:""})로 상태 업데이트
   };
   const onReset = () => {
-    setText("");
+    setInputs({
+      name: "",
+      nth: "",
+    });
   };
   return (
     <div>
       <hr />
-      <input value={text} />
-      <button>초기화</button>
-      <h2>값:{text}</h2>
+      <input name="name" placeholder="이름" onChange={onChange} value={name} />
+      <input name="nth" placeholder="기수" onChange={onChange} value={nth} />
+      <button onClick={onReset}>초기화</button>
+      <h2>
+        값:{name} ({nth})
+      </h2>
     </div>
   );
 };
