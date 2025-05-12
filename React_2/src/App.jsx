@@ -13,13 +13,21 @@ function App() {
   };
 
   // 1. 렌더링마다 매번 실행
-
+  useEffect(() => {
+    console.log("1. 렌더링");
+  });
   // 2. 마운팅 + count 변경될 때마다 실행
-
+  useEffect(() => {
+    console.log("2. count 변화");
+  }, [count]);
   // 3. 마운팅 + name 변경될 때마다 실행
-
+  useEffect(() => {
+    console.log("3. name 변화");
+  }, [name]);
   // 4. 마운팅만 (맨처음 랜더링 때만)
-
+  useEffect(() => {
+    console.log("4. 마운팅만");
+  }, []);
   return (
     <>
       <button onClick={handleCountUpdate}>클릭</button>

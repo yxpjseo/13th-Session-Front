@@ -7,6 +7,10 @@ const Timer = () => {
     }, 1000);
 
     // 무엇을 추가해줘야 할까요?
+    return () => {
+      clearInterval(timer);
+      console.log("타이머 종료!");
+    };
   }, []);
 
   return (
