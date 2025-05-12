@@ -32,8 +32,8 @@ const Wrapper = styled.div`
   gap: 0.8rem;
   border-radius: 0.8rem;
 
-  color: ${(props) => (props.isSelected ? "white" : "black")};
-  background-color: ${(props) => (props.isSelected ? "#81A7D3" : "#D8E4EC")};
+  color: ${({ isSelected }) => (isSelected ? "white" : "black")};
+  background-color: ${(isSelected) => (isSelected ? "#81A7D3" : "#D8E4EC")};
   //위 속성값을 동적 스타일링을 주고 싶을 때 어떻게 하면 좋을까요?
   //세션 자료 60p의 React(1) 종합 실습 문제에서 아래쪽 사진을 참고해주세요!
   //그리고 여기서 삼항연산자 사용을 위해 필요한 props를 위 JSX에서 인자로 넘겨주는 것도 잊으면 안됩니다.
