@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-import TopBar from "../components/Topbar";
+import TopBar from "../components/TopBar";
 
 // props로 받아올 posts, setPosts 구조 분해 할당
 const CreatePage = () => {

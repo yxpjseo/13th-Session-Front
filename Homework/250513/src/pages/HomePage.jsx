@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import TopBar from "../components/Topbar";
+import TopBar from "../components/TopBar";
 
 // props로 받아올 posts 구조 분해 할당
 const HomePage = () => {
