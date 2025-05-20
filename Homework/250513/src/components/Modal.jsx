@@ -5,14 +5,10 @@ const Modal = ({ setModal }) => {
     setModal(false);
   };
 
-  const notDelete = (e) => {
-    e.stopPropagation();
-  };
-
   return (
     <>
       <Wrapper onClick={deleteModal}>
-        <Container onClick={notDelete}>
+        <Container onClick={(e) => e.stopPropagation()}>
           <Text>모달창</Text>
         </Container>
       </Wrapper>
