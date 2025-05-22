@@ -1,8 +1,7 @@
 import useNumberStore from "../store/numberStore";
 
 const Content = () => {
-  const { number, increase, decrease, reset } = useNumberStore();
-
+  const { number, increase, decrease, reset } = useNumberStore(); //구조분해 할당(?)
   return (
     <>
       <div className="contents">
