@@ -12,8 +12,14 @@ export default function Login() {
 	const login = () => {
 		// TODO: 여기에 카카오 authorize URL을 생성하는 코드를 작성하세요.
 		// 예시(의사코드):
-		// const params = new URLSearchParams({ ...위 파라미터들... })
-		// window.location.href = `https://kauth.kakao.com/oauth/authorize?${params.toString()}`
+		const params = new URLSearchParams({
+			client_id: import.meta.env.VITE_KAKAO_REST_API_KEY,
+			redirect_uri: `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/kakao-login`,
+			response_type: "code",
+			scope: "account_email,profile_nickname",
+			state: window.location.origin,
+		})
+		window.location.href = `https://kauth.kakao.com/oauth/authorize?${params.toString()}`
 	};
 
 	return <button onClick={login}>카카오로 로그인</button>;
