@@ -17,8 +17,25 @@ const SignupPage = () => {
   //---------------------------------------
 
   // 문제 3) id, pw, name 정보를 data에 담아 post 방식으로 요청 보낸 후 성공 시 로그인 페이지로 이동
-
-  const goSignup = async () => {};
+  const goSignup = async () => {
+    await axios({
+      method: "post",
+      url: `${BASE_URL}account/signup/`,
+      data: {
+        username: id,
+        password: pw,
+        nickname: name,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+        throw new Error(error);
+      });
+  };
 
   //---------------------------------------
 

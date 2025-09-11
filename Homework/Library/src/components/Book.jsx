@@ -14,7 +14,19 @@ const Book = ({ book, render, setRender }) => {
   // 문제 9) 책 스크랩 함수 작성하기
   const handleLikeBook = () => {
     // 로컬 스토리지에서 token 값을 받아와 token 변수에 할당
+    const token = localStorage.getItem("token");
     // 토큰이 존재하면 axios를 사용하여 좋아요 여부 변경 API를 호출하고, 그게 아니면 navigate를 사용하여 로그인 페이지로 이동
+    if (token) {
+      axios({
+        headers: { Authorization: token && `Bearer ${token}` },
+        method: "patch",
+        url: `${BASE_URL}book/scrap/${book.id}/`,
+      }).then(() => {
+        setRender(render + 1);
+      });
+    } else {
+      navigate("/login");
+    }
   };
 
   //---------------------------------------

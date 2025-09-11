@@ -1,1 +1,107 @@
-<!-- 이 주석은 삭제하시면 됩니다 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="user">
+        <img src="img/user.svg" alt="user" />
+        <p class="user-name">아기사자</p>
+        <img src="img/right.svg" alt="right" />
+      </div>
+      <div class="title">TO-DO-LIST</div>
+      <div class="ect">
+        <img src="img/info.svg" alt="info" />
+        <img src="img/menu.svg" alt="menu" />
+      </div>
+    </header>
+    <section class="calender-mood">
+      <div class="calender">
+        <div class="calender-title">
+          <p class="section-title">Calender</p>
+        </div>
+        <div class="calender-contents">
+          <img src="img/calender.svg" alt="calender" />
+        </div>
+      </div>
+      <div class="mood">
+        <div class="mood-title">
+          <p class="section-title">Today's mood</p>
+        </div>
+        <div class="mood-contents">
+          <label
+            ><input type="checkbox" class="single-check" id="sad" />
+            <img src="img/sad.svg" alt="sad" /></label
+          ><br />
+          <label
+            ><input type="checkbox" class="single-check" id="ordinary" /><img
+              src="img/ordinary.svg"
+              alt="ordinary" /></label
+          ><br />
+          <label
+            ><input type="checkbox" class="single-check" id="smile" />
+            <img src="img/smile.svg" alt="smile" /></label
+          ><br />
+          <label
+            ><input type="checkbox" class="single-check" id="happy" />
+            <img src="img/happy.svg" alt="happy"
+          /></label>
+        </div>
+      </div>
+    </section>
+    <section class="todo">
+      <div class="todo-title">
+        <p class="section-title">To-Do</p>
+        <label class="plus">
+          <input type="checkbox" id="plus" />
+          <img src="img/plus1.svg" alt="plus" />
+        </label>
+      </div>
+
+      <div class="todo-contents">
+        <form class="todo-write">
+          <input class="todo-input" placeholder="할 일을 입력하세요." />
+          <button class="add" type="submit">
+            <img src="img/add1.svg" alt="add" />
+          </button>
+        </form>
+        <ul class="todo-list">
+          <li>
+            <label class="check">
+              <input type="checkbox" />
+              <img src="img/check1.svg" alt="check" />
+            </label>
+            <span>투두리스트 만들기</span>
+            <button class="minus">
+              <img class="minus" src="img/minus1.svg" alt="minus" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="done">
+      <div class="done-title">
+        <p class="section-title">Done</p>
+      </div>
+      <div class="done-contents">
+        <ul class="done-list">
+          <li>
+            <label class="check">
+              <input type="checkbox" checked />
+              <img src="img/check1.svg" alt="check" />
+            </label>
+            <span>레포트 작성하기</span>
+            <button class="minus">
+              <img class="minus" src="img/minus1.svg" alt="minus" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  height: 97px;
+  display: flex;
+  position: fixed;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0px 0px 30px 30px;
+  background: var(
+    --Black,
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+    #000
+  );
+}
+.user {
+  display: flex;
+  width: 155px;
+  height: 47px;
+  padding: 5px 7px 5px 13px;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: var(--White, #fff);
+}
+.user-name {
+  color: var(--Black, #000);
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+.title {
+  color: var(--White, #fff);
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+}
+.ect {
+  display: flex;
+  width: 59px;
+  height: 29px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+section {
+  margin-top: 132px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.section-title {
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 30px */
+}
+
+.calender-mood {
+  width: 447px;
+}
+.calender-title {
+  display: flex;
+  height: 64px;
+  padding: 14px 27px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 30px 30px 30px 0px;
+  background: var(--Grey, #c2c2cd);
+}
+.calender-contents {
+  margin-top: 20px;
+  height: 395px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 30px 30px 30px;
+  border: 2px solid var(--White-Grey, #f2f2f5);
+}
+.mood {
+  margin-top: 30px;
+}
+.mood-title {
+  display: flex;
+  height: 64px;
+  padding: 14px 27px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 30px;
+  background: var(--White-Grey, #f2f2f5);
+}
+.mood-contents {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+input#sad:checked + img {
+  content: url("img/sad2.svg"); /* 체크되었을 때 이미지 변경 */
+}
+input#ordinary:checked + img {
+  content: url("img/ordinary2.svg"); /* 체크되었을 때 이미지 변경 */
+}
+input#smile:checked + img {
+  content: url("img/smile2.svg"); /* 체크되었을 때 이미지 변경 */
+}
+input#happy:checked + img {
+  content: url("img/happy2.svg"); /* 체크되었을 때 이미지 변경 */
+}
+
+.todo {
+  display: flex;
+  width: 450px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.todo-title {
+  display: flex;
+  height: 64px;
+  padding: 14px 27px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 30px 30px 30px 0px;
+  background: var(--Orange, #ff8364);
+}
+.todo-contents {
+  height: 562px;
+  align-self: stretch;
+  border-radius: 0px 30px 30px 30px;
+  border: 2px solid var(--White-Grey, #f2f2f5);
+}
+.todo-write {
+  display: flex;
+  padding: 20px 22px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 0px 28px 28px 28px;
+  background: var(--White-Grey, #f2f2f5);
+}
+.todo-input {
+  all: unset;
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+label input {
+  display: none; /* 기본 체크박스 숨김 */
+}
+.plus input:checked + img {
+  content: url("img/plus2.svg"); /* 체크되었을 때 이미지 변경 */
+}
+.check input:checked + img {
+  content: url("img/check2.svg"); /* 체크되었을 때 이미지 변경 */
+}
+.minus img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  padding: 20px 22px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-bottom: 1px solid var(--White-Grey, #f2f2f5);
+  background: rgba(255, 255, 255, 0);
+}
+span {
+  display: block;
+  width: 250px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+button {
+  all: unset;
+}
+
+.done {
+  display: flex;
+  width: 450px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.done-title {
+  height: 64px;
+  padding: 14px 27px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 30px 30px 30px 0px;
+  background: var(--Orange, #ff8364);
+}
+.done-contents {
+  height: 562px;
+  align-self: stretch;
+  border-radius: 0px 30px 30px 30px;
+  border: 2px solid var(--White-Grey, #f2f2f5);
+}
