@@ -1,4 +1,4 @@
-//import { supabase } from "../superbase/client";
+import { supabase } from "../superbase/client";
 
 export default function Login() {
 	const login = async () => {
@@ -9,15 +9,14 @@ export default function Login() {
 		//    - options.redirectTo: `${origin}/auth/callback?next=/profile`
 		//    - options.scopes: 'account_email profile_nickname profile_image'
 
-		// 예시)
-		// const origin = ...;
-		// await supabase.auth.signInWithOAuth({
-		// 	provider: 'kakao',
-		// 	options: {
-		// 		redirectTo: `${origin}/auth/callback?next=/profile`,
-		// 		scopes: 'account_email profile_nickname profile_image',
-		// 	},
-		// });
+		const origin = window.location.origin;
+		await supabase.auth.signInWithOAuth({
+		provider: 'kakao',
+			options: {
+				redirectTo: `${origin}/auth/callback?next=/profile`,
+				scopes: 'account_email profile_nickname profile_image',
+			},
+		});
 
 		alert("TODO: 로그인 로직을 구현해 보세요 (파일: Login.jsx)");
 	};

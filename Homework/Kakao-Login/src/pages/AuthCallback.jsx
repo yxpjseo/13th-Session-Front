@@ -13,24 +13,17 @@ const AuthCallback = () => {
 			const next = url.searchParams.get("next") || "/";
 			const code = url.searchParams.get("code");
 
-			if (error) {
-				setMessage(`로그인 실패: ${error}`);
-				return;
-			}
-
 			// TODO: 인가코드(code)로 세션을 교환하세요.
-			// 힌트: const code = url.searchParams.get('code')
-			// 힌트: await supabase.auth.exchangeCodeForSession(code)
+			await supabase.auth.exchangeCodeForSession(code)
+
 			// 에러가 있으면 setMessage로 표시하고 return 하세요.
-			// 아래는 예시 형태입니다.
-			// const code = url.searchParams.get('code');
-			// if (code) {
-			// 	const { error: exchangeError } = await supabase.auth.exchangeCodeForSession(code);
-			// 	if (exchangeError) {
-			// 		setMessage(`세션 생성 실패: ${exchangeError.message}`);
-			// 		return;
-			// 	}
-			// }
+			if (code) {
+				const { error: exchangeError } = await supabase.auth.exchangeCodeForSession(code);
+				if (exchangeError) {
+					setMessage(`세션 생성 실패: ${exchangeError.message}`);
+					return;
+				}
+			}
 
 			const { data } = await supabase.auth.getSession();
 			if (data.session) {
