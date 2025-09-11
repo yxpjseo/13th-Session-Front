@@ -11,6 +11,7 @@ const AuthCallback = () => {
 			const url = new URL(window.location.href);
 			const error = url.searchParams.get("error");
 			const next = url.searchParams.get("next") || "/";
+			const code = url.searchParams.get("code");
 
 			if (error) {
 				setMessage(`로그인 실패: ${error}`);
