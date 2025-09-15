@@ -18,7 +18,7 @@ export default function Login() {
 			},
 		});
 
-		alert("TODO: 로그인 로직을 구현해 보세요 (파일: Login.jsx)");
+		//alert("TODO: 로그인 로직을 구현해 보세요 (파일: Login.jsx)");
 	};
 
 	return <button onClick={login}>카카오로 로그인</button>;
