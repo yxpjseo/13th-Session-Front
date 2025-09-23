@@ -1,3 +1,4 @@
+// @ts-ignore
 /* global Deno */
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
