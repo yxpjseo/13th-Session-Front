@@ -83,8 +83,8 @@ const QueryPage = () => {
           {todos.map((todo) => (
             <TodoItem key={todo.id}>
               <span>{todo.title}</span>
-              {/* <DeleteButton
-              onClick={}>Delete</DeleteButton> */}
+              <DeleteButton
+              onClick={()=> {deleteMutation.mutate(todo.id)}}>Delete</DeleteButton>
             </TodoItem>
           ))}
         </ul>

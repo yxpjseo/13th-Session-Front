@@ -46,6 +46,7 @@ const InfinitePage = () => {
 
   useEffect(() => {
     if (inView && hasNextPage) {
+      fetchNextPage();
     }
   }, [inView, hasNextPage]);
 
